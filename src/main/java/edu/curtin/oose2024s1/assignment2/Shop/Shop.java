@@ -3,6 +3,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import edu.curtin.oose2024s1.assignment2.Inventory.Inventory;
+import edu.curtin.oose2024s1.assignment2.Message.Message;
 
 public class Shop 
 {
@@ -23,17 +24,22 @@ public class Shop
         money += amount; 
     }
 
-    public int getDay()
-    {
-        return day;
-    }
-
     public void addObserver(ShopObserver ob)
     {
         obs.add(ob);
     }
 
-    public void stats()
+    public int getDay()
+    {
+        return day;
+    }
+
+    public Inventory getInventory()
+    {
+        return inventory;
+    }
+
+    public void stats() //Prints shop stats and elapses a day
     {
         System.out.println("\n***Shop Stats***");
         System.out.println("Day: " + day);
@@ -51,5 +57,15 @@ public class Shop
         {
             ob.observed();
         }
+    }
+
+    public String executeMessage(String msg)
+    {
+        String feedback;
+
+        Message toExec = Message.createMessage(msg, this);
+        feedback = toExec.execute();
+
+        return feedback;
     }
 }

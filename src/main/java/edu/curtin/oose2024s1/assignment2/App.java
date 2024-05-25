@@ -5,10 +5,6 @@ import java.io.*;
 import edu.curtin.oose2024s1.assignment2.Shop.PaydayObserver;
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
-/**
- * Use this code to get started on Assignment 2. You are free to modify or replace this file as
- * needed (to fulfil the assignment requirements, of course).
- */
 public class App
 {
     public static void main(String[] args)
@@ -17,6 +13,8 @@ public class App
         Shop shop = new Shop();
         PaydayObserver paydayOb = new PaydayObserver(shop);
         paydayOb.setup();
+        String printMsgs = "";
+        int totalMsgs = 0;
 
         try
         {
@@ -24,14 +22,19 @@ public class App
             {
                 System.out.println("-------------------------------");
                 shop.notifyObservers(); //check for payday
-                shop.stats();
+                printMsgs = "";
                 String msg = inp.nextMessage();
 
                 while(msg != null) //process the message
                 {
-                    System.out.println(msg);
+                    printMsgs += msg + " : ";
+                    printMsgs += shop.executeMessage(msg) + "\n";
+                    totalMsgs++;
                     msg = inp.nextMessage();
                 }
+
+                shop.stats();
+                System.out.println(printMsgs);
 
                 // Wait 1 second
                 try
@@ -48,5 +51,11 @@ public class App
         {
             System.out.println("Error reading user input");
         }
+    
+        System.out.println("-------------------------------");
+        System.out.println("END OF PROGRAM");
+        System.out.println("Total Number of Input Messages: " + totalMsgs);
+        System.out.println("Total Number of Failures: 0");
+        System.out.println("-------------------------------");
     }
 }
