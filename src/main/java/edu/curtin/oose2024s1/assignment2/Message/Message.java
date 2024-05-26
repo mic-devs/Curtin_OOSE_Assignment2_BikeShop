@@ -16,16 +16,28 @@ public abstract class Message
 
     public static Message createMessage(String msg, Shop inShop)
     {
-        
-        Message toReturn = null;
+        String[] parts = msg.split(" ");
+        Message toReturn;
 
-        if (msg.equals("DELIVERY"))
+        if (parts[0].equals("DELIVERY"))
         {
             toReturn = new DeliveryMsg(inShop);
         }
-        else if (msg.equals("PURCHASE-IN-STORE")) 
+        else if (parts[0].equals("PURCHASE-IN-STORE")) 
         {
             toReturn = new PurchaseInMsg(inShop);
+        }
+        else if (parts[0].equals("PURCHASE-ONLINE"))
+        {
+            toReturn = new PurchaseOnMsg(inShop);
+        }
+        else if (parts[0].equals("DROP-OFF"))
+        {
+            toReturn = new DropOffMsg(inShop);
+        }
+        else if (parts[0].equals("PICK-UP"))
+        {
+            toReturn = new DropOffMsg(inShop);
         }
         else
         {
