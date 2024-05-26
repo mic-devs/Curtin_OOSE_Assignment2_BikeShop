@@ -6,7 +6,6 @@ public class PurchaseInMsg extends Message
 {
     public PurchaseInMsg(Shop inShop)
     {
-        this.type = "PURCHASEIN";
         this.shop = inShop;
     }
 

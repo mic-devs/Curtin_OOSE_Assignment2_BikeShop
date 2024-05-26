@@ -4,15 +4,17 @@ import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class DropOffMsg extends Message
 {
-    public DropOffMsg(Shop inShop)
+    private String owner;
+
+    public DropOffMsg(Shop shop, String owner)
     {
-        this.type = "PURCHASEON";
-        this.shop = inShop;
+        this.shop = shop;
+        this.owner = owner;
     }
 
     @Override
     public String execute()
     {
-        return "DROP-OFF YET TO IMPLEMENT";
+        return shop.dropOff(owner);
     }
 }

@@ -4,15 +4,18 @@ import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class PurchaseOnMsg extends Message
 {
-    public PurchaseOnMsg(Shop inShop)
+    private String owner;
+
+    public PurchaseOnMsg(Shop inShop, String owner)
     {
-        this.type = "PURCHASEON";
         this.shop = inShop;
+        this.owner = owner;
     }
 
     @Override
     public String execute()
     {
-        return "PURCHASE-ONLINE YET TO IMPLEMENT";
+        shop.getInventory().onlineBike(owner);
+        return shop.purchase();
     }
 }

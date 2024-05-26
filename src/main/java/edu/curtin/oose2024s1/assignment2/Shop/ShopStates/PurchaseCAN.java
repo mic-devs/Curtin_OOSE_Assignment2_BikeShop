@@ -7,7 +7,7 @@ public class PurchaseCAN implements PurchaseState
     @Override
     public String purchase(Shop shop) 
     {
-        shop.getInventory().buyBikeInStore(); //decrements no. available bikes
+        shop.getInventory().buyBike(); //decrements no. available bikes
         shop.addMoney(1000); //receive $1000 for bike
 
         return "ACCEPTED";

@@ -4,15 +4,9 @@ import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public abstract class Message 
 {
-    protected String type;
     protected Shop shop;
 
     public abstract String execute();
-
-    public String getType()
-    {
-        return type;
-    }
 
     public static Message createMessage(String msg, Shop inShop)
     {
@@ -29,15 +23,15 @@ public abstract class Message
         }
         else if (parts[0].equals("PURCHASE-ONLINE"))
         {
-            toReturn = new PurchaseOnMsg(inShop);
+            toReturn = new PurchaseOnMsg(inShop, parts[1]);
         }
         else if (parts[0].equals("DROP-OFF"))
         {
-            toReturn = new DropOffMsg(inShop);
+            toReturn = new DropOffMsg(inShop, parts[1]);
         }
         else if (parts[0].equals("PICK-UP"))
         {
-            toReturn = new DropOffMsg(inShop);
+            toReturn = new PickUpMsg(inShop, parts[1]);
         }
         else
         {

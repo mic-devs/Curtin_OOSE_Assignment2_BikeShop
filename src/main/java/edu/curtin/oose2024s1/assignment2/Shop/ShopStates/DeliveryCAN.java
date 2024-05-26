@@ -9,7 +9,7 @@ public class DeliveryCAN implements DeliveryState
     public String doDelivery(Shop shop) 
     {
         shop.addMoney(-5000); //deduct money
-        shop.getInventory().delivery(); //receive 10 bikes
+        shop.getInventory().addAvailable(10);; //receive 10 bikes
 
         return "ACCEPTED";
     }

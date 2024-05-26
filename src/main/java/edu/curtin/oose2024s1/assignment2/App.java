@@ -8,7 +8,7 @@ public class App
 {
     public static void main(String[] args)
     {
-        BikeShopInput inp = new BikeShopInput(); //Seed optional
+        BikeShopInput inp = new BikeShopInput(9); //Seed optional
         
         String printMsgs = "";
         int totalMsgs = 0;

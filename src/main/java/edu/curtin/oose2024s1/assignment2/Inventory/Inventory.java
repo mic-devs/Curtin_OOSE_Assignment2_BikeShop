@@ -1,19 +1,17 @@
 package edu.curtin.oose2024s1.assignment2.Inventory;
-import java.util.HashMap;
-
-import edu.curtin.oose2024s1.assignment2.Bike.Bike;
+import java.util.ArrayList;
 
 public class Inventory 
 {
     private int available; //no. of bikes available to purchase
-    private HashMap<String, Bike> servicing; //stores bikes being serviced
-    private HashMap<String, Bike> toPickUp; //stores bikes awaiting pick-up
+    private ArrayList<Bike> servicing; //stores bikes being serviced
+    private ArrayList<Bike> toPickUp; //stores bikes awaiting pick-up
 
     public Inventory()
     {
-        this.available = 50; //inventory always starts with 50 bikes available
-        this.servicing = new HashMap<>();
-        this.toPickUp = new HashMap<>();
+        this.available = 100; //inventory always starts with 50 bikes available
+        this.servicing = new ArrayList<Bike>();
+        this.toPickUp = new ArrayList<Bike>();
     }
 
     public int getAllBikes()
@@ -32,30 +30,50 @@ public class Inventory
         available += add;
     }
 
-    public int getServicing()
+    public ArrayList<Bike> getServicing()
     {
-        return servicing.size();
+        return servicing;
     }
 
-    public int getToPickUp()
+    public ArrayList<Bike> getToPickUp()
     {
-        return toPickUp.size();
+        return toPickUp;
     }
 
-    public void delivery()
-    {
-        addAvailable(10);
-    }
-
-    public void buyBikeInStore()
+    public void buyBike() //Regardless of online or offline, will decrement available bikes
     {
         available--;
     }
 
-    public void buyBikeOnline(String owner)
+    public void onlineBike(String owner) //add online bought bike to pick-up
     {
-        available--;
-        Bike newBike = new Bike(owner);
-        toPickUp.put(owner, newBike);
+        //0 for service-date meaning bike was purchased online, not drop-off
+        Bike newBike = new Bike(owner, 0);
+        toPickUp.add(newBike); 
+    }
+
+    public void serviceBikes(int date) //add serviced bike to pick-up
+    {
+        ArrayList<Bike> toRemove = new ArrayList<Bike>();
+
+        for (Bike i : servicing) //check every bike
+        {
+            if ((date - i.getServiceDate()) == 2)
+            {
+                toPickUp.add(i); //add the serviced bike to pick-up
+                toRemove.add(i);
+            }
+        }
+
+        for (Bike i : toRemove)
+        {
+            servicing.remove(i); //remove the serviced bikes from servicing
+        }
+    }
+
+    public void dropOff(String owner, int date)
+    {
+        Bike newBike = new Bike(owner, date);
+        servicing.add(newBike);
     }
 }

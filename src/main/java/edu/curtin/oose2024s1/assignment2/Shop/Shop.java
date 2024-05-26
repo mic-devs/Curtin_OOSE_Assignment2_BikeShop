@@ -5,10 +5,7 @@ import java.util.Set;
 import edu.curtin.oose2024s1.assignment2.Inventory.Inventory;
 import edu.curtin.oose2024s1.assignment2.Message.Message;
 import edu.curtin.oose2024s1.assignment2.Shop.ShopObservers.*;
-import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.DeliveryCAN;
-import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.DeliveryState;
-import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.PurchaseCAN;
-import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.PurchaseState;
+import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.*;
 
 public class Shop 
 {
@@ -19,6 +16,7 @@ public class Shop
     private PaydayObserver paydayOb;
     private DeliveryState deliveryState = new DeliveryCAN(); 
     private PurchaseState purchaseState = new PurchaseCAN();
+    private DropOffState dropOffState = new DropOffCAN();
 
     public Shop() //Constructor
     {
@@ -63,8 +61,8 @@ public class Shop
         System.out.println("Day: " + day);
         System.out.println("Balance: $" + money);
         System.out.println("Bikes for sale: " + inventory.getAvailable());
-        System.out.println("Bikes being serviced: " + inventory.getServicing());
-        System.out.println("Bikes awaiting pick-up: " + inventory.getToPickUp());
+        System.out.println("Bikes being serviced: " + inventory.getServicing().size());
+        System.out.println("Bikes awaiting pick-up: " + inventory.getToPickUp().size());
         System.out.println("***Shop Stats***\n");
         day++; //elapse a day
     }
@@ -76,6 +74,10 @@ public class Shop
         deliverOb.setup();
         PurchaseObserver purchaseOb = new PurchaseObserver(this);
         purchaseOb.setup();
+        DropOffObserver dropOffOb = new DropOffObserver(this);
+        dropOffOb.setup();
+        ServicingObserver servicingOb = new ServicingObserver(this);
+        servicingOb.setup();
     }
 
     public void notifyObservers()
@@ -104,6 +106,16 @@ public class Shop
     public String purchase()
     {
         return purchaseState.purchase(this);
+    }
+
+    public void setDropOffState(DropOffState newState)
+    {
+        dropOffState = newState;
+    }
+
+    public String dropOff(String owner)
+    {
+        return dropOffState.doDropOff(this, owner, day);
     }
 
     public String executeMessage(String msg)

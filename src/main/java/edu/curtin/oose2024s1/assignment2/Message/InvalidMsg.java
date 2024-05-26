@@ -6,7 +6,6 @@ public class InvalidMsg extends Message
 {
     public InvalidMsg(Shop inShop)
     {
-        this.type = "INVALID";
         this.shop = inShop;
     }
 

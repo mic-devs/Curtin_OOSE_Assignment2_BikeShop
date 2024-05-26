@@ -6,7 +6,6 @@ public class DeliveryMsg extends Message
 {
     public DeliveryMsg (Shop inShop)
     {
-        this.type = "DELIVERY";
         this.shop = inShop;
     }
 
