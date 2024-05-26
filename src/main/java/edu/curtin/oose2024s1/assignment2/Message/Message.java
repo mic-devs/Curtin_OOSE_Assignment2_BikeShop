@@ -16,6 +16,7 @@ public abstract class Message
 
     public static Message createMessage(String msg, Shop inShop)
     {
+        
         Message toReturn = null;
 
         if (msg.equals("DELIVERY"))
@@ -28,7 +29,7 @@ public abstract class Message
         }
         else
         {
-            toReturn = new EmptyMsg(inShop);
+            toReturn = new InvalidMsg(inShop);
         }
 
         return toReturn;

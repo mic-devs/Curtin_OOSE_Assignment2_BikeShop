@@ -2,17 +2,17 @@ package edu.curtin.oose2024s1.assignment2.Message;
 
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
-public class EmptyMsg extends Message
+public class InvalidMsg extends Message
 {
-    public EmptyMsg(Shop inShop)
+    public InvalidMsg(Shop inShop)
     {
-        this.type = "EMPTY";
+        this.type = "INVALID";
         this.shop = inShop;
     }
 
     @Override
     public String execute()
     {
-        return "Empty Execution";
+        return "FAILURE : Invalid Message";
     }
 }

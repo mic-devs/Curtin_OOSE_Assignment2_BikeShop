@@ -2,34 +2,45 @@ package edu.curtin.oose2024s1.assignment2;
 
 import java.io.*;
 
-import edu.curtin.oose2024s1.assignment2.Shop.PaydayObserver;
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class App
 {
     public static void main(String[] args)
     {
-        BikeShopInput inp = new BikeShopInput(1); //Seed optional
-        Shop shop = new Shop();
-        PaydayObserver paydayOb = new PaydayObserver(shop);
-        paydayOb.setup();
+        BikeShopInput inp = new BikeShopInput(); //Seed optional
+        
         String printMsgs = "";
         int totalMsgs = 0;
+        int failureMsgs = 0;
+
+        Shop shop = new Shop(); //Create shop
+        shop.setupObservers(); //Setup shop's observers
 
         try
         {
             while(System.in.available() == 0)
             {
                 System.out.println("-------------------------------");
-                shop.notifyObservers(); //check for payday
+                shop.payday(); //call payday observer ONCE per day ONLY!
                 printMsgs = "";
                 String msg = inp.nextMessage();
 
                 while(msg != null) //process the message
                 {
+                    shop.notifyObservers(); //notify observers before executing message
+
                     printMsgs += msg + " : ";
-                    printMsgs += shop.executeMessage(msg) + "\n";
+
+                    String executedMsg = shop.executeMessage(msg) + "\n";;
+                    printMsgs += executedMsg;
+                    if (executedMsg.contains("FAILURE"))
+                    {
+                        failureMsgs++;
+                    }
+
                     totalMsgs++;
+
                     msg = inp.nextMessage();
                 }
 
@@ -55,7 +66,7 @@ public class App
         System.out.println("-------------------------------");
         System.out.println("END OF PROGRAM");
         System.out.println("Total Number of Input Messages: " + totalMsgs);
-        System.out.println("Total Number of Failures: 0");
+        System.out.println("Total Number of Failures: " + failureMsgs);
         System.out.println("-------------------------------");
     }
 }

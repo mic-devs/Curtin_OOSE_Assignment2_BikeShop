@@ -1,17 +1,14 @@
-package edu.curtin.oose2024s1.assignment2.Shop;
+package edu.curtin.oose2024s1.assignment2.Shop.ShopObservers;
+
+import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class PaydayObserver implements ShopObserver
 {
     private Shop shop; // Back reference to the subject
 
-    public PaydayObserver(Shop inShop) // The observer sets itself up here
+    public PaydayObserver(Shop inShop)
     {
         this.shop = inShop;
-    }
-
-    public void setup()
-    {
-        shop.addObserver(this);
     }
 
     @Override
@@ -24,4 +21,8 @@ public class PaydayObserver implements ShopObserver
         }
     }
     
+    public void setup()
+    {
+        //Unused method from interface, payday observer should NOT be added to Shop's obs set
+    }
 }

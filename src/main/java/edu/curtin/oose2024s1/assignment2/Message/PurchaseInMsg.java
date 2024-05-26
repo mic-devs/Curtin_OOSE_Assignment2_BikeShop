@@ -13,9 +13,6 @@ public class PurchaseInMsg extends Message
     @Override
     public String execute()
     {
-        shop.getInventory().buyBikeInStore();
-        shop.addMoney(1000);
-
-        return "Sold a bike in store.";
+        return shop.purchase();
     }
 }

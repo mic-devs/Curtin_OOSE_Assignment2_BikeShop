@@ -13,9 +13,6 @@ public class DeliveryMsg extends Message
     @Override
     public String execute()
     {
-        shop.getInventory().delivery();
-        shop.addMoney(-5000);
-
-        return "Did Delivery";
+        return shop.delivery();
     }
 }

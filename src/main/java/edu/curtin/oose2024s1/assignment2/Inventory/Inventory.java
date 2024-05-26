@@ -27,6 +27,11 @@ public class Inventory
         return available;
     }
 
+    public void addAvailable(int add)
+    {
+        available += add;
+    }
+
     public int getServicing()
     {
         return servicing.size();
@@ -39,7 +44,7 @@ public class Inventory
 
     public void delivery()
     {
-        available += 10;
+        addAvailable(10);
     }
 
     public void buyBikeInStore()

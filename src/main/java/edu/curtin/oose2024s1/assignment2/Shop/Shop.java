@@ -4,6 +4,11 @@ import java.util.Set;
 
 import edu.curtin.oose2024s1.assignment2.Inventory.Inventory;
 import edu.curtin.oose2024s1.assignment2.Message.Message;
+import edu.curtin.oose2024s1.assignment2.Shop.ShopObservers.*;
+import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.DeliveryCAN;
+import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.DeliveryState;
+import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.PurchaseCAN;
+import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.PurchaseState;
 
 public class Shop 
 {
@@ -11,6 +16,9 @@ public class Shop
     private int day;
     private Inventory inventory;
     private Set<ShopObserver> obs = new HashSet<>();
+    private PaydayObserver paydayOb;
+    private DeliveryState deliveryState = new DeliveryCAN(); 
+    private PurchaseState purchaseState = new PurchaseCAN();
 
     public Shop() //Constructor
     {
@@ -34,6 +42,16 @@ public class Shop
         return day;
     }
 
+    public int getMoney()
+    {
+        return money;
+    }
+
+    public void payday()
+    {
+        paydayOb.observed();
+    }
+
     public Inventory getInventory()
     {
         return inventory;
@@ -51,12 +69,41 @@ public class Shop
         day++; //elapse a day
     }
 
+    public void setupObservers()
+    {
+        paydayOb = new PaydayObserver(this);
+        DeliveryObserver deliverOb = new DeliveryObserver(this);
+        deliverOb.setup();
+        PurchaseObserver purchaseOb = new PurchaseObserver(this);
+        purchaseOb.setup();
+    }
+
     public void notifyObservers()
     {
         for (ShopObserver ob : obs)
         {
             ob.observed();
         }
+    }
+
+    public void setDeliveryState(DeliveryState newState)
+    {
+        deliveryState = newState;
+    }
+
+    public String delivery()
+    {
+        return deliveryState.doDelivery(this);
+    }
+
+    public void setPurchaseState(PurchaseState newState)
+    {
+        purchaseState = newState;
+    }
+
+    public String purchase()
+    {
+        return purchaseState.purchase(this);
     }
 
     public String executeMessage(String msg)
