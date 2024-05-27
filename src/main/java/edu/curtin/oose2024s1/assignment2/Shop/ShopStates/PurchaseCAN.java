@@ -1,5 +1,7 @@
-package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
+//  State where bike can be purchased from shop, and will do so by removing a bike
+//  from the inventory, and receiving $1000
 
+package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class PurchaseCAN implements PurchaseState

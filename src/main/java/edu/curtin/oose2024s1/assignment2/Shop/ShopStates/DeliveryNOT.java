@@ -1,5 +1,6 @@
-package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
+//A state where shop cannot receive delivery, and will inform caller why so
 
+package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class DeliveryNOT implements DeliveryState

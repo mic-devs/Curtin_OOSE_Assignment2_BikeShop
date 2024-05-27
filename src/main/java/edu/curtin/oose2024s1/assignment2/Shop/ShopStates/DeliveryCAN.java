@@ -1,5 +1,7 @@
-package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
+//  State where Shop can accept the delivery, and will do so by deducting money,
+//  and adding 10 new available bikes to the inventory
 
+package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class DeliveryCAN implements DeliveryState

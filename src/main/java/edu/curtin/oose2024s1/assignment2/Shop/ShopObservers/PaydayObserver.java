@@ -1,3 +1,5 @@
+//Observer checks if it's payday (every 7th day), and pays the shopkeeper accordingly
+
 package edu.curtin.oose2024s1.assignment2.Shop.ShopObservers;
 
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;

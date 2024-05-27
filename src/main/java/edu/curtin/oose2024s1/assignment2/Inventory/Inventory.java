@@ -1,3 +1,7 @@
+//  Inventory stores number of available bikes, 
+//  and owned bikes (being serviced or for pick-up).
+//  Processes bikes for purchase, delivery, drop-off, and pick-up
+
 package edu.curtin.oose2024s1.assignment2.Inventory;
 import java.util.ArrayList;
 
@@ -10,8 +14,8 @@ public class Inventory
     public Inventory()
     {
         this.available = 50; //inventory always starts with 50 bikes available
-        this.servicing = new ArrayList<Bike>();
-        this.toPickUp = new ArrayList<Bike>();
+        this.servicing = new ArrayList<Bike>(); 
+        this.toPickUp = new ArrayList<Bike>(); 
     }
 
     public int getAllBikes()
@@ -25,7 +29,7 @@ public class Inventory
         return available;
     }
 
-    public void addAvailable(int add)
+    public void addAvailable(int add) //for delivery
     {
         available += add;
     }
@@ -52,7 +56,7 @@ public class Inventory
         toPickUp.add(newBike); 
     }
 
-    public void serviceBikes(int date) //add serviced bike to pick-up
+    public void serviceBikes(int date) //check bikes in servicing, and move to pick-up if ready
     {
         ArrayList<Bike> toRemove = new ArrayList<Bike>();
 
@@ -71,7 +75,7 @@ public class Inventory
         }
     }
 
-    public void dropOff(String owner, int date)
+    public void dropOff(String owner, int date) //receives bike for drop-off
     {
         Bike newBike = new Bike(owner, date);
         servicing.add(newBike);

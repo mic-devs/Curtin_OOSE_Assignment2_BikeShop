@@ -1,3 +1,5 @@
+//Observer that updates the PurchaseState
+
 package edu.curtin.oose2024s1.assignment2.Shop.ShopObservers;
 
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;

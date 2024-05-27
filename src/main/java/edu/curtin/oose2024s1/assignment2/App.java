@@ -1,18 +1,21 @@
+/*  
+ *  Provided App.java file that contains main.
+ *  Receives messages from provided BikeShopInput.java, and executes them.
+ *  Creates a shop object that acts as the bike shop, which messages act upon.
+*/
+
 package edu.curtin.oose2024s1.assignment2;
-
 import java.io.*;
-
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class App
 {
     public static void main(String[] args)
     {
-        File myObj = new File("sim_results.txt"); 
-        myObj.delete();
+        File myObj = new File("sim_results.txt"); //Create the save file
+        myObj.delete(); //Clear the save file in case it pre-exists
 
-
-        BikeShopInput inp = new BikeShopInput(10); //Seed optional
+        BikeShopInput inp = new BikeShopInput(); //Seed optional
         
         String printMsgs = "";
         int totalMsgs = 0;
@@ -45,6 +48,7 @@ public class App
                         failureMsgs++;
                     }
 
+                    //append executed message to save file
                     appendStrToFile("sim_results.txt", msg + " " + executedMsg);
 
                     totalMsgs++;
@@ -85,22 +89,18 @@ public class App
     }
 
     public static void appendStrToFile(String fileName, String str)
-    {
-        // Try block to check for exceptions
+    { //For writing output to the save file
         try 
         {
-            // Open given file in append mode by creating an
-            // object of BufferedWriter class
+            // Open given file in append mode by creating an object of BufferedWriter class
             BufferedWriter out = new BufferedWriter(new FileWriter(fileName, true));
  
-            // Writing on output stream
-            out.write(str);
-            // Closing the connection
+            out.write(str); //writing the message to the save file
+
             out.close();
         }
-        catch (IOException e) // Catch block to handle the exceptions
+        catch (IOException e)
         {
-            // Display message when exception occurs
             System.out.println("Error when writing to output file: " + e);
         }
     }

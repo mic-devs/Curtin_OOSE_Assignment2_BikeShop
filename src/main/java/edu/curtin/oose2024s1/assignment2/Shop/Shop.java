@@ -1,7 +1,14 @@
-package edu.curtin.oose2024s1.assignment2.Shop;
-import java.util.HashSet;
-import java.util.Set;
+/*
+ * Acts as the bike shop.
+ * Consists of an Inventory.java object which stores all the bikes.
+ * Uses states to determine whether it can accept deliveries, drop-offs, or purchases.
+ * Uses a set of observers to update those state patterns, and check bikes in service.
+ * Individual observer to check for weekly payday.
+ * Accepts messages from App.java, parses them using Message.java
+ */
 
+package edu.curtin.oose2024s1.assignment2.Shop;
+import java.util.*;
 import edu.curtin.oose2024s1.assignment2.Inventory.Inventory;
 import edu.curtin.oose2024s1.assignment2.Message.Message;
 import edu.curtin.oose2024s1.assignment2.Shop.ShopObservers.*;
@@ -45,7 +52,7 @@ public class Shop
         return money;
     }
 
-    public void payday()
+    public void payday() //calls the payday observer
     {
         paydayOb.observed();
     }
@@ -55,7 +62,7 @@ public class Shop
         return inventory;
     }
 
-    public String stats() //Prints shop stats and elapses a day
+    public String stats() //toString(s) shop stats and elapses a day
     {
         String toPrint;
         toPrint = "\n***Shop Stats***";
@@ -95,7 +102,7 @@ public class Shop
         deliveryState = newState;
     }
 
-    public String delivery()
+    public String delivery() 
     {
         return deliveryState.doDelivery(this);
     }

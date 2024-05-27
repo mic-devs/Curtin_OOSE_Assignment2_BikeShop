@@ -1,3 +1,5 @@
+//Delivery message that calls the shop's delivery()
+
 package edu.curtin.oose2024s1.assignment2.Message;
 
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;

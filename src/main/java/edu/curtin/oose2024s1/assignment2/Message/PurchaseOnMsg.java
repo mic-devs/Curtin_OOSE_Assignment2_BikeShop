@@ -1,3 +1,6 @@
+//  Purchase-Online message calls shop's purchase(),
+//  and inventory's onlineBike() to put the bike for pick-up
+
 package edu.curtin.oose2024s1.assignment2.Message;
 
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;

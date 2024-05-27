@@ -1,5 +1,6 @@
-package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
+//State where Shop can receive a bike for drop-off, and will add it to the inventory
 
+package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class DropOffCAN implements DropOffState

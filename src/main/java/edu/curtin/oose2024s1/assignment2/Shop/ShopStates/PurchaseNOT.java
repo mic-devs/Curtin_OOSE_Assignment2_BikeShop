@@ -1,5 +1,6 @@
-package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
+//State where a bike cannot be purchased from Shop, as none are available
 
+package edu.curtin.oose2024s1.assignment2.Shop.ShopStates;
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public class PurchaseNOT implements PurchaseState

@@ -1,3 +1,5 @@
+//An invalid message from parsing
+
 package edu.curtin.oose2024s1.assignment2.Message;
 
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;

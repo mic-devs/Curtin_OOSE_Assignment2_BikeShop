@@ -1,5 +1,6 @@
-package edu.curtin.oose2024s1.assignment2.Message;
+//Factory class for parsing messages and creating the respective message object 
 
+package edu.curtin.oose2024s1.assignment2.Message;
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
 public abstract class Message 

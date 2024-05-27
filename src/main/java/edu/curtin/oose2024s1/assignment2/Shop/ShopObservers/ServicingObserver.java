@@ -1,3 +1,6 @@
+//  Observer that checks on bikes in service, and moves them to pick-up
+//  if it's been two days since drop-off.
+
 package edu.curtin.oose2024s1.assignment2.Shop.ShopObservers;
 
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;

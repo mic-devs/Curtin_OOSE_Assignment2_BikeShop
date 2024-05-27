@@ -1,3 +1,5 @@
+//Purchase-In-Store message calls shop's purchase()
+
 package edu.curtin.oose2024s1.assignment2.Message;
 
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;

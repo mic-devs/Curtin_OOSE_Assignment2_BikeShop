@@ -1,7 +1,9 @@
+//  Pick-Up message to search Inventory for a given bike,
+//  and notifies the caller if bike cannot be retrieved and why.
+
 package edu.curtin.oose2024s1.assignment2.Message;
 
 import java.util.ArrayList;
-
 import edu.curtin.oose2024s1.assignment2.Inventory.Bike;
 import edu.curtin.oose2024s1.assignment2.Shop.Shop;
 
@@ -18,7 +20,7 @@ public class PickUpMsg extends Message
     @Override
     public String execute()
     {
-        String feedback = "PICK-UP yet to be implemented";
+        String feedback = "";
         Bike found = null;
 
         ArrayList<Bike> pickups = shop.getInventory().getToPickUp();
