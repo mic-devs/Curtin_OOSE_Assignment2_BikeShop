@@ -1,0 +1,135 @@
+
+***Shop Stats***
+Day: 1
+Balance: $15000
+Bikes for sale: 50
+Bikes being serviced: 0
+Bikes awaiting pick-up: 0
+***Shop Stats***
+
+PURCHASE-ONLINE mvcdt@kloc.nzu ACCEPTED
+PICK-UP mvcdt@kloc.nzu ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+PURCHASE-ONLINE krl@osauwew.jda ACCEPTED
+
+***Shop Stats***
+Day: 2
+Balance: $19000
+Bikes for sale: 46
+Bikes being serviced: 0
+Bikes awaiting pick-up: 1
+***Shop Stats***
+
+
+***Shop Stats***
+Day: 3
+Balance: $19000
+Bikes for sale: 46
+Bikes being serviced: 0
+Bikes awaiting pick-up: 1
+***Shop Stats***
+
+PICK-UP mvcdt@kloc.nzu FAILURE : No bike matching customer email
+DROP-OFF xthjzl@vomuwnl.lib ACCEPTED
+PICK-UP xthjzl@vomuwnl.lib FAILURE : Bike not ready
+
+***Shop Stats***
+Day: 4
+Balance: $19000
+Bikes for sale: 46
+Bikes being serviced: 1
+Bikes awaiting pick-up: 1
+***Shop Stats***
+
+DELIVERY ACCEPTED
+PICK-UP krl@osauwew.jda ACCEPTED
+
+***Shop Stats***
+Day: 5
+Balance: $14000
+Bikes for sale: 56
+Bikes being serviced: 1
+Bikes awaiting pick-up: 0
+***Shop Stats***
+
+DROP-OFF vssfxwc@fpc.wea ACCEPTED
+PURCHASE-ONLINE bkl@dhc.uvh ACCEPTED
+DROP-OFF kryy@tzw.sze ACCEPTED
+PURCHASE-ONLINE quxyis@nlq.efo ACCEPTED
+DROP-OFF gsganfh@yfxsn.kwb ACCEPTED
+
+***Shop Stats***
+Day: 6
+Balance: $16000
+Bikes for sale: 54
+Bikes being serviced: 3
+Bikes awaiting pick-up: 3
+***Shop Stats***
+
+
+***Shop Stats***
+Day: 7
+Balance: $15000
+Bikes for sale: 54
+Bikes being serviced: 3
+Bikes awaiting pick-up: 3
+***Shop Stats***
+
+
+***Shop Stats***
+Day: 8
+Balance: $15000
+Bikes for sale: 54
+Bikes being serviced: 0
+Bikes awaiting pick-up: 6
+***Shop Stats***
+
+PURCHASE-ONLINE vmn@pqbkwi.jso ACCEPTED
+
+***Shop Stats***
+Day: 9
+Balance: $16000
+Bikes for sale: 53
+Bikes being serviced: 0
+Bikes awaiting pick-up: 7
+***Shop Stats***
+
+PURCHASE-IN-STORE ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+DROP-OFF lvhk@uvjso.nsv ACCEPTED
+DROP-OFF hfvsu@oxw.uit ACCEPTED
+
+***Shop Stats***
+Day: 10
+Balance: $19000
+Bikes for sale: 50
+Bikes being serviced: 2
+Bikes awaiting pick-up: 7
+***Shop Stats***
+
+
+***Shop Stats***
+Day: 11
+Balance: $19000
+Bikes for sale: 50
+Bikes being serviced: 2
+Bikes awaiting pick-up: 7
+***Shop Stats***
+
+PURCHASE-ONLINE qkjw@llwp.nfn ACCEPTED
+
+***Shop Stats***
+Day: 12
+Balance: $20000
+Bikes for sale: 49
+Bikes being serviced: 0
+Bikes awaiting pick-up: 10
+***Shop Stats***
+
+-------------------------------
+END OF PROGRAM
+Total Number of Input Messages: 22
+Total Number of Failures: 2
+-------------------------------

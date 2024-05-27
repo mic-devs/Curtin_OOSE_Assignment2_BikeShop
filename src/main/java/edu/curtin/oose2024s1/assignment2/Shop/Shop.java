@@ -55,16 +55,18 @@ public class Shop
         return inventory;
     }
 
-    public void stats() //Prints shop stats and elapses a day
+    public String stats() //Prints shop stats and elapses a day
     {
-        System.out.println("\n***Shop Stats***");
-        System.out.println("Day: " + day);
-        System.out.println("Balance: $" + money);
-        System.out.println("Bikes for sale: " + inventory.getAvailable());
-        System.out.println("Bikes being serviced: " + inventory.getServicing().size());
-        System.out.println("Bikes awaiting pick-up: " + inventory.getToPickUp().size());
-        System.out.println("***Shop Stats***\n");
+        String toPrint;
+        toPrint = "\n***Shop Stats***";
+        toPrint += "\nDay: " + day;
+        toPrint += "\nBalance: $" + money;
+        toPrint += "\nBikes for sale: " + inventory.getAvailable();
+        toPrint += "\nBikes being serviced: " + inventory.getServicing().size();
+        toPrint += "\nBikes awaiting pick-up: " + inventory.getToPickUp().size();
+        toPrint += "\n***Shop Stats***\n\n";
         day++; //elapse a day
+        return toPrint;
     }
 
     public void setupObservers()

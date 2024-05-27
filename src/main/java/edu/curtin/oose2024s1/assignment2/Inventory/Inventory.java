@@ -9,7 +9,7 @@ public class Inventory
 
     public Inventory()
     {
-        this.available = 100; //inventory always starts with 50 bikes available
+        this.available = 50; //inventory always starts with 50 bikes available
         this.servicing = new ArrayList<Bike>();
         this.toPickUp = new ArrayList<Bike>();
     }

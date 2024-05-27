@@ -8,7 +8,11 @@ public class App
 {
     public static void main(String[] args)
     {
-        BikeShopInput inp = new BikeShopInput(9); //Seed optional
+        File myObj = new File("sim_results.txt"); 
+        myObj.delete();
+
+
+        BikeShopInput inp = new BikeShopInput(10); //Seed optional
         
         String printMsgs = "";
         int totalMsgs = 0;
@@ -25,7 +29,9 @@ public class App
                 shop.payday(); //call payday observer ONCE per day ONLY!
                 printMsgs = "";
                 String msg = inp.nextMessage();
+                String shopStats;
 
+                shop.notifyObservers(); //notify observers even if no messages are executed
                 while(msg != null) //process the message
                 {
                     shop.notifyObservers(); //notify observers before executing message
@@ -39,13 +45,18 @@ public class App
                         failureMsgs++;
                     }
 
+                    appendStrToFile("sim_results.txt", msg + " " + executedMsg);
+
                     totalMsgs++;
 
                     msg = inp.nextMessage();
                 }
 
-                shop.stats();
-                System.out.println(printMsgs);
+                shopStats = shop.stats();
+                //Apppend shop stats to save file
+                appendStrToFile("sim_results.txt", shopStats);
+                
+                System.out.println(shopStats + printMsgs); //Print shop stats & messages
 
                 // Wait 1 second
                 try
@@ -63,10 +74,34 @@ public class App
             System.out.println("Error reading user input");
         }
     
-        System.out.println("-------------------------------");
-        System.out.println("END OF PROGRAM");
-        System.out.println("Total Number of Input Messages: " + totalMsgs);
-        System.out.println("Total Number of Failures: " + failureMsgs);
-        System.out.println("-------------------------------");
+        printMsgs = "-------------------------------\n";
+        printMsgs += "END OF PROGRAM\n";
+        printMsgs += "Total Number of Input Messages: " + totalMsgs;
+        printMsgs += "\nTotal Number of Failures: " + failureMsgs;
+        printMsgs += "\n-------------------------------";
+
+        System.out.println(printMsgs);
+        appendStrToFile("sim_results.txt", printMsgs);
+    }
+
+    public static void appendStrToFile(String fileName, String str)
+    {
+        // Try block to check for exceptions
+        try 
+        {
+            // Open given file in append mode by creating an
+            // object of BufferedWriter class
+            BufferedWriter out = new BufferedWriter(new FileWriter(fileName, true));
+ 
+            // Writing on output stream
+            out.write(str);
+            // Closing the connection
+            out.close();
+        }
+        catch (IOException e) // Catch block to handle the exceptions
+        {
+            // Display message when exception occurs
+            System.out.println("Error when writing to output file: " + e);
+        }
     }
 }
