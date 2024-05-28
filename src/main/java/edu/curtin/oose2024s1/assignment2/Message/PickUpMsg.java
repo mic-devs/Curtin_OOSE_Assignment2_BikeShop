@@ -1,11 +1,13 @@
 //  Pick-Up message to search Inventory for a given bike,
 //  and notifies the caller if bike cannot be retrieved and why.
 
-package edu.curtin.oose2024s1.assignment2.Message;
+package edu.curtin.oose2024s1.assignment2.message;
 
 import java.util.ArrayList;
-import edu.curtin.oose2024s1.assignment2.Inventory.Bike;
-import edu.curtin.oose2024s1.assignment2.Shop.Shop;
+import java.util.logging.Level;
+
+import edu.curtin.oose2024s1.assignment2.inventory.Bike;
+import edu.curtin.oose2024s1.assignment2.shop.Shop;
 
 public class PickUpMsg extends Message
 {
@@ -17,6 +19,7 @@ public class PickUpMsg extends Message
         this.owner = owner;
     }
 
+    @SuppressWarnings("PMD.LooseCoupling") //ArrayList is needed for use-case
     @Override
     public String execute()
     {
@@ -42,6 +45,7 @@ public class PickUpMsg extends Message
             {
                 shop.addMoney(100); //get $100 for servicing the bike
             }
+            logger.log(Level.INFO, "Pick Up executed");
         }
         else //Bike not found in pickups
         {
@@ -51,12 +55,14 @@ public class PickUpMsg extends Message
                 if(i.getOwner().equals(owner)) //Found bike, still in service
                 {
                     feedback = "FAILURE : Bike not ready";
+                    logger.log(Level.INFO, "Drop-Off Failed, Bike unready");
                 }
             }
 
             if(!feedback.equals("FAILURE : Bike not ready")) //No bike at all in shop
             {
                 feedback = "FAILURE : No bike matching customer email";
+                logger.log(Level.INFO, "Drop-Off Failed, Bike non-existent");
             }
         }
 

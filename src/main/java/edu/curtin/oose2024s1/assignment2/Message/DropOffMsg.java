@@ -1,8 +1,10 @@
 //Drop-Off message that calls the shop's dropOff() 
 
-package edu.curtin.oose2024s1.assignment2.Message;
+package edu.curtin.oose2024s1.assignment2.message;
 
-import edu.curtin.oose2024s1.assignment2.Shop.Shop;
+import java.util.logging.Level;
+
+import edu.curtin.oose2024s1.assignment2.shop.Shop;
 
 public class DropOffMsg extends Message
 {
@@ -17,6 +19,7 @@ public class DropOffMsg extends Message
     @Override
     public String execute()
     {
+        logger.log(Level.INFO, "Drop-Off executed");
         return shop.dropOff(owner);
     }
 }

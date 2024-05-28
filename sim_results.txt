@@ -7,444 +7,306 @@ Bikes being serviced: 0
 Bikes awaiting pick-up: 0
 ***Shop Stats***
 
-PURCHASE-IN-STORE ACCEPTED
-PURCHASE-IN-STORE ACCEPTED
 
 ***Shop Stats***
 Day: 2
-Balance: $17000
-Bikes for sale: 48
+Balance: $15000
+Bikes for sale: 50
 Bikes being serviced: 0
 Bikes awaiting pick-up: 0
 ***Shop Stats***
 
 PURCHASE-IN-STORE ACCEPTED
-PURCHASE-ONLINE ankig@jqvmyxr.tma ACCEPTED
-PURCHASE-ONLINE yucmo@trgyh.hlj ACCEPTED
-PICK-UP yucmo@trgyh.hlj ACCEPTED
+PURCHASE-ONLINE vsgucfp@xjjsc.ala ACCEPTED
+DROP-OFF zxmbp@wcj.amc ACCEPTED
 
 ***Shop Stats***
 Day: 3
-Balance: $20000
-Bikes for sale: 45
-Bikes being serviced: 0
+Balance: $17000
+Bikes for sale: 48
+Bikes being serviced: 1
 Bikes awaiting pick-up: 1
 ***Shop Stats***
 
-PICK-UP yucmo@trgyh.hlj FAILURE : No bike matching customer email
+PICK-UP zxmbp@wcj.amc FAILURE : Bike not ready
+l6qrK_lwNA_*^4R8tXw!_/Q%Iz FAILURE : Invalid Message
 
 ***Shop Stats***
 Day: 4
-Balance: $20000
-Bikes for sale: 45
-Bikes being serviced: 0
+Balance: $17000
+Bikes for sale: 48
+Bikes being serviced: 1
 Bikes awaiting pick-up: 1
 ***Shop Stats***
 
-PURCHASE-ONLINE sbkcty@eulbzwf.jac ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+PURCHASE-ONLINE kcatgs@qlpakz.ypb ACCEPTED
+PURCHASE-ONLINE madaae@ccire.tym ACCEPTED
 
 ***Shop Stats***
 Day: 5
-Balance: $21000
-Bikes for sale: 44
+Balance: $20000
+Bikes for sale: 45
 Bikes being serviced: 0
-Bikes awaiting pick-up: 2
+Bikes awaiting pick-up: 4
 ***Shop Stats***
 
-PICK-UP yucmo@trgyh.hlj FAILURE : No bike matching customer email
+PURCHASE-ONLINE ihd@rkxdtk.bui ACCEPTED
+PURCHASE-ONLINE hyaeecd@dhpof.dyu ACCEPTED
+PICK-UP zxmbp@wcj.amc ACCEPTED
 
 ***Shop Stats***
 Day: 6
-Balance: $21000
-Bikes for sale: 44
+Balance: $22100
+Bikes for sale: 43
 Bikes being serviced: 0
-Bikes awaiting pick-up: 2
+Bikes awaiting pick-up: 5
 ***Shop Stats***
 
-PURCHASE-ONLINE wqzfjav@zaxbb.cnl ACCEPTED
-PURCHASE-ONLINE jgj@dsqqon.fmb ACCEPTED
-DROP-OFF cyheb@paxwu.apl ACCEPTED
-DELIVERY ACCEPTED
-DROP-OFF xmgmb@mxdit.pjt ACCEPTED
-DROP-OFF dhlxyq@xjeaxtl.ana ACCEPTED
 
 ***Shop Stats***
 Day: 7
-Balance: $17000
-Bikes for sale: 52
-Bikes being serviced: 3
-Bikes awaiting pick-up: 4
+Balance: $21100
+Bikes for sale: 43
+Bikes being serviced: 0
+Bikes awaiting pick-up: 5
 ***Shop Stats***
 
-PURCHASE-IN-STORE ACCEPTED
-DROP-OFF iothss@bxsbqv.apu ACCEPTED
-PURCHASE-IN-STORE ACCEPTED
+PURCHASE-ONLINE upvpeq@xpgbx.fqb ACCEPTED
+PURCHASE-ONLINE ttn@dbpfx.gwi ACCEPTED
+PURCHASE-ONLINE ynxygb@uegutqj.hlh ACCEPTED
 
 ***Shop Stats***
 Day: 8
-Balance: $19000
-Bikes for sale: 50
-Bikes being serviced: 4
-Bikes awaiting pick-up: 4
+Balance: $24100
+Bikes for sale: 40
+Bikes being serviced: 0
+Bikes awaiting pick-up: 8
 ***Shop Stats***
 
-PURCHASE-IN-STORE ACCEPTED
 
 ***Shop Stats***
 Day: 9
-Balance: $20000
-Bikes for sale: 49
-Bikes being serviced: 1
-Bikes awaiting pick-up: 7
+Balance: $24100
+Bikes for sale: 40
+Bikes being serviced: 0
+Bikes awaiting pick-up: 8
 ***Shop Stats***
 
-PURCHASE-IN-STORE ACCEPTED
+PICK-UP vsgucfp@xjjsc.ala ACCEPTED
+PICK-UP ynxygb@uegutqj.hlh ACCEPTED
 
 ***Shop Stats***
 Day: 10
-Balance: $21000
-Bikes for sale: 48
+Balance: $24100
+Bikes for sale: 40
 Bikes being serviced: 0
-Bikes awaiting pick-up: 8
+Bikes awaiting pick-up: 6
 ***Shop Stats***
 
+PURCHASE-ONLINE cbvhqlm@llezmf.rsp ACCEPTED
+PURCHASE-ONLINE mhhfm@ojjxjp.zsy ACCEPTED
 
 ***Shop Stats***
 Day: 11
-Balance: $21000
-Bikes for sale: 48
+Balance: $26100
+Bikes for sale: 38
 Bikes being serviced: 0
 Bikes awaiting pick-up: 8
 ***Shop Stats***
 
-^Ny]+n$"VzR=ABXG4 )=9 sbkcty@eulbzwf.jac FAILURE : Invalid Message
-PURCHASE-IN-STORE ACCEPTED
 
 ***Shop Stats***
 Day: 12
-Balance: $22000
+Balance: $26100
+Bikes for sale: 38
+Bikes being serviced: 0
+Bikes awaiting pick-up: 8
+***Shop Stats***
+
+DELIVERY ACCEPTED
+PURCHASE-ONLINE jtj@aynxw.toq ACCEPTED
+PICK-UP kcatgs@qlpakz.ypb ACCEPTED
+
+***Shop Stats***
+Day: 13
+Balance: $22100
 Bikes for sale: 47
 Bikes being serviced: 0
 Bikes awaiting pick-up: 8
 ***Shop Stats***
 
-DELIVERY ACCEPTED
-DROP-OFF gcmg@xartul.duf ACCEPTED
 
 ***Shop Stats***
-Day: 13
-Balance: $17000
-Bikes for sale: 57
+Day: 14
+Balance: $21100
+Bikes for sale: 47
+Bikes being serviced: 0
+Bikes awaiting pick-up: 8
+***Shop Stats***
+
+DROP-OFF bqefu@odg.jbs ACCEPTED
+
+***Shop Stats***
+Day: 15
+Balance: $21100
+Bikes for sale: 47
 Bikes being serviced: 1
+Bikes awaiting pick-up: 8
+***Shop Stats***
+
+
+***Shop Stats***
+Day: 16
+Balance: $21100
+Bikes for sale: 47
+Bikes being serviced: 1
+Bikes awaiting pick-up: 8
+***Shop Stats***
+
+PICK-UP jtj@aynxw.toq ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+
+***Shop Stats***
+Day: 17
+Balance: $22100
+Bikes for sale: 46
+Bikes being serviced: 0
+Bikes awaiting pick-up: 8
+***Shop Stats***
+
+
+***Shop Stats***
+Day: 18
+Balance: $22100
+Bikes for sale: 46
+Bikes being serviced: 0
+Bikes awaiting pick-up: 8
+***Shop Stats***
+
+PICK-UP vsgucfp@xjjsc.ala FAILURE : No bike matching customer email
+
+***Shop Stats***
+Day: 19
+Balance: $22100
+Bikes for sale: 46
+Bikes being serviced: 0
 Bikes awaiting pick-up: 8
 ***Shop Stats***
 
 PURCHASE-IN-STORE ACCEPTED
 PURCHASE-IN-STORE ACCEPTED
-PICK-UP dhlxyq@xjeaxtl.ana ACCEPTED
-PURCHASE-IN-STORE ACCEPTED
-
-***Shop Stats***
-Day: 14
-Balance: $19100
-Bikes for sale: 54
-Bikes being serviced: 1
-Bikes awaiting pick-up: 7
-***Shop Stats***
-
 PURCHASE-IN-STORE ACCEPTED
 PURCHASE-IN-STORE ACCEPTED
-PURCHASE-ONLINE wzwmp@ldwzck.arg ACCEPTED
 PURCHASE-IN-STORE ACCEPTED
-PURCHASE-IN-STORE ACCEPTED
-
-***Shop Stats***
-Day: 15
-Balance: $24100
-Bikes for sale: 49
-Bikes being serviced: 0
-Bikes awaiting pick-up: 9
-***Shop Stats***
-
-DROP-OFF wmadr@ejkwtk.obr ACCEPTED
-PURCHASE-ONLINE qfhtlp@icfhz.svh ACCEPTED
-
-***Shop Stats***
-Day: 16
-Balance: $25100
-Bikes for sale: 48
-Bikes being serviced: 1
-Bikes awaiting pick-up: 10
-***Shop Stats***
-
-
-***Shop Stats***
-Day: 17
-Balance: $25100
-Bikes for sale: 48
-Bikes being serviced: 1
-Bikes awaiting pick-up: 10
-***Shop Stats***
-
-PURCHASE-IN-STORE ACCEPTED
-PURCHASE-ONLINE logf@azurj.amf ACCEPTED
-
-***Shop Stats***
-Day: 18
-Balance: $27100
-Bikes for sale: 46
-Bikes being serviced: 0
-Bikes awaiting pick-up: 12
-***Shop Stats***
-
-PICK-UP gcmg@xartul.duf ACCEPTED
-PICK-UP yucmo@trgyh.hlj FAILURE : No bike matching customer email
-
-***Shop Stats***
-Day: 19
-Balance: $27200
-Bikes for sale: 46
-Bikes being serviced: 0
-Bikes awaiting pick-up: 11
-***Shop Stats***
-
-PICK-UP gcmg@xartul.duf FAILURE : No bike matching customer email
 
 ***Shop Stats***
 Day: 20
-Balance: $27200
-Bikes for sale: 46
+Balance: $27100
+Bikes for sale: 41
 Bikes being serviced: 0
-Bikes awaiting pick-up: 11
+Bikes awaiting pick-up: 8
 ***Shop Stats***
 
-PURCHASE-ONLINE rln@jzuwz.skc ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+DROP-OFF qxgyv@xmhg.nui ACCEPTED
+DROP-OFF wut@itbz.gta ACCEPTED
+PURCHASE-ONLINE anyvrx@rhhw.mwu ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+PICK-UP vsgucfp@xjjsc.ala FAILURE : No bike matching customer email
 
 ***Shop Stats***
 Day: 21
-Balance: $27200
-Bikes for sale: 45
-Bikes being serviced: 0
-Bikes awaiting pick-up: 12
+Balance: $29100
+Bikes for sale: 38
+Bikes being serviced: 2
+Bikes awaiting pick-up: 9
 ***Shop Stats***
 
 
 ***Shop Stats***
 Day: 22
-Balance: $27200
-Bikes for sale: 45
-Bikes being serviced: 0
-Bikes awaiting pick-up: 12
+Balance: $29100
+Bikes for sale: 38
+Bikes being serviced: 2
+Bikes awaiting pick-up: 9
 ***Shop Stats***
 
-PURCHASE-IN-STORE ACCEPTED
+PICK-UP qxgyv@xmhg.nui ACCEPTED
 
 ***Shop Stats***
 Day: 23
-Balance: $28200
-Bikes for sale: 44
+Balance: $29200
+Bikes for sale: 38
 Bikes being serviced: 0
-Bikes awaiting pick-up: 12
+Bikes awaiting pick-up: 10
 ***Shop Stats***
 
-PURCHASE-ONLINE vibdc@mlxqea.zby ACCEPTED
-PURCHASE-ONLINE utu@ifuudxo.avr ACCEPTED
 
 ***Shop Stats***
 Day: 24
-Balance: $30200
-Bikes for sale: 42
+Balance: $29200
+Bikes for sale: 38
 Bikes being serviced: 0
-Bikes awaiting pick-up: 14
+Bikes awaiting pick-up: 10
 ***Shop Stats***
 
-PICK-UP dhlxyq@xjeaxtl.ana FAILURE : No bike matching customer email
+PURCHASE-ONLINE aome@snhpxwv.zgq ACCEPTED
+PICK-UP wut@itbz.gta ACCEPTED
 
 ***Shop Stats***
 Day: 25
-Balance: $30200
-Bikes for sale: 42
+Balance: $30300
+Bikes for sale: 37
 Bikes being serviced: 0
-Bikes awaiting pick-up: 14
+Bikes awaiting pick-up: 10
 ***Shop Stats***
 
 
 ***Shop Stats***
 Day: 26
-Balance: $30200
-Bikes for sale: 42
+Balance: $30300
+Bikes for sale: 37
 Bikes being serviced: 0
-Bikes awaiting pick-up: 14
+Bikes awaiting pick-up: 10
 ***Shop Stats***
 
+PURCHASE-IN-STORE ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
 
 ***Shop Stats***
 Day: 27
-Balance: $30200
-Bikes for sale: 42
+Balance: $35300
+Bikes for sale: 32
 Bikes being serviced: 0
-Bikes awaiting pick-up: 14
+Bikes awaiting pick-up: 10
 ***Shop Stats***
 
-PURCHASE-ONLINE ter@ejtplpx.ctd ACCEPTED
 
 ***Shop Stats***
 Day: 28
-Balance: $30200
-Bikes for sale: 41
+Balance: $34300
+Bikes for sale: 32
 Bikes being serviced: 0
-Bikes awaiting pick-up: 15
+Bikes awaiting pick-up: 10
 ***Shop Stats***
 
+PURCHASE-ONLINE srp@als.xjo ACCEPTED
+PURCHASE-IN-STORE ACCEPTED
 
 ***Shop Stats***
 Day: 29
-Balance: $30200
-Bikes for sale: 41
+Balance: $36300
+Bikes for sale: 30
 Bikes being serviced: 0
-Bikes awaiting pick-up: 15
-***Shop Stats***
-
-PURCHASE-IN-STORE ACCEPTED
-PURCHASE-IN-STORE ACCEPTED
-PURCHASE-IN-STORE ACCEPTED
-PICK-UP logf@azurj.amf ACCEPTED
-
-***Shop Stats***
-Day: 30
-Balance: $33200
-Bikes for sale: 38
-Bikes being serviced: 0
-Bikes awaiting pick-up: 14
-***Shop Stats***
-
-DELIVERY ACCEPTED
-PICK-UP cyheb@paxwu.apl ACCEPTED
-DELIVERY ACCEPTED
-
-***Shop Stats***
-Day: 31
-Balance: $23300
-Bikes for sale: 58
-Bikes being serviced: 0
-Bikes awaiting pick-up: 13
-***Shop Stats***
-
-
-***Shop Stats***
-Day: 32
-Balance: $23300
-Bikes for sale: 58
-Bikes being serviced: 0
-Bikes awaiting pick-up: 13
-***Shop Stats***
-
-
-***Shop Stats***
-Day: 33
-Balance: $23300
-Bikes for sale: 58
-Bikes being serviced: 0
-Bikes awaiting pick-up: 13
-***Shop Stats***
-
-
-***Shop Stats***
-Day: 34
-Balance: $23300
-Bikes for sale: 58
-Bikes being serviced: 0
-Bikes awaiting pick-up: 13
-***Shop Stats***
-
-PURCHASE-ONLINE xwmnn@fqn.fsq ACCEPTED
-PURCHASE-ONLINE etkiswx@pxzcey.pom ACCEPTED
-PURCHASE-ONLINE covpce@islwv.dkh ACCEPTED
-
-***Shop Stats***
-Day: 35
-Balance: $25300
-Bikes for sale: 55
-Bikes being serviced: 0
-Bikes awaiting pick-up: 16
-***Shop Stats***
-
-PURCHASE-IN-STORE ACCEPTED
-
-***Shop Stats***
-Day: 36
-Balance: $26300
-Bikes for sale: 54
-Bikes being serviced: 0
-Bikes awaiting pick-up: 16
-***Shop Stats***
-
-PICK-UP logf@azurj.amf FAILURE : No bike matching customer email
-PURCHASE-IN-STORE ACCEPTED
-PURCHASE-ONLINE vym@ekstnu.zpw ACCEPTED
-PURCHASE-IN-STORE ACCEPTED
-
-***Shop Stats***
-Day: 37
-Balance: $29300
-Bikes for sale: 51
-Bikes being serviced: 0
-Bikes awaiting pick-up: 17
-***Shop Stats***
-
-PURCHASE-IN-STORE ACCEPTED
-
-***Shop Stats***
-Day: 38
-Balance: $30300
-Bikes for sale: 50
-Bikes being serviced: 0
-Bikes awaiting pick-up: 17
-***Shop Stats***
-
-PURCHASE-IN-STORE ACCEPTED
-PICK-UP vym@ekstnu.zpw ACCEPTED
-
-***Shop Stats***
-Day: 39
-Balance: $31300
-Bikes for sale: 49
-Bikes being serviced: 0
-Bikes awaiting pick-up: 16
-***Shop Stats***
-
-PURCHASE-IN-STORE ACCEPTED
-DELIVERY ACCEPTED
-PURCHASE-ONLINE yfgittm@whrb.bbn ACCEPTED
-
-***Shop Stats***
-Day: 40
-Balance: $28300
-Bikes for sale: 57
-Bikes being serviced: 0
-Bikes awaiting pick-up: 17
-***Shop Stats***
-
-
-***Shop Stats***
-Day: 41
-Balance: $28300
-Bikes for sale: 57
-Bikes being serviced: 0
-Bikes awaiting pick-up: 17
-***Shop Stats***
-
-
-***Shop Stats***
-Day: 42
-Balance: $27300
-Bikes for sale: 57
-Bikes being serviced: 0
-Bikes awaiting pick-up: 17
+Bikes awaiting pick-up: 11
 ***Shop Stats***
 
 -------------------------------
 END OF PROGRAM
-Total Number of Input Messages: 67
-Total Number of Failures: 7
+Total Number of Input Messages: 46
+Total Number of Failures: 4
 -------------------------------

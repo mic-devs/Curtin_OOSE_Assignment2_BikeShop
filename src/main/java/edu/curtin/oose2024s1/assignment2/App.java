@@ -6,10 +6,13 @@
 
 package edu.curtin.oose2024s1.assignment2;
 import java.io.*;
-import edu.curtin.oose2024s1.assignment2.Shop.Shop;
+import java.util.logging.*;
+
+import edu.curtin.oose2024s1.assignment2.shop.Shop;
 
 public class App
 {
+    private static final Logger logger = Logger.getLogger(App.class.getName());
     public static void main(String[] args)
     {
         File myObj = new File("sim_results.txt"); //Create the save file
@@ -17,7 +20,7 @@ public class App
 
         BikeShopInput inp = new BikeShopInput(); //Seed optional
         
-        String printMsgs = "";
+        String printMsgs;
         int totalMsgs = 0;
         int failureMsgs = 0;
 
@@ -69,13 +72,14 @@ public class App
                 }
                 catch(InterruptedException e)
                 {
+                    logger.log(Level.SEVERE, "Interrupted Exception thrown: ",e);
                     throw new AssertionError(e);
                 }
             }
         }
         catch(IOException e)
         {
-            System.out.println("Error reading user input");
+            logger.log(Level.SEVERE, "Error reading user input: ", e);
         }
     
         printMsgs = "-------------------------------\n";
@@ -93,6 +97,7 @@ public class App
         try 
         {
             // Open given file in append mode by creating an object of BufferedWriter class
+            @SuppressWarnings("PMD.CloseResource") //This resource is closed in line 105
             BufferedWriter out = new BufferedWriter(new FileWriter(fileName, true));
  
             out.write(str); //writing the message to the save file
@@ -101,7 +106,8 @@ public class App
         }
         catch (IOException e)
         {
-            System.out.println("Error when writing to output file: " + e);
+            logger.log(Level.SEVERE, "Problem when writing to save file: ", e);
         }
     }
+
 }

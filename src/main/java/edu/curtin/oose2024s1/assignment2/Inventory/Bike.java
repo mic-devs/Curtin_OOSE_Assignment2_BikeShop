@@ -1,7 +1,7 @@
 //  A bike object, specifically owned bikes, identified by its owner's email address.
 //  May have been dropped-off for servicing, or purchased online.
 
-package edu.curtin.oose2024s1.assignment2.Inventory;
+package edu.curtin.oose2024s1.assignment2.inventory;
 
 public class Bike 
 {

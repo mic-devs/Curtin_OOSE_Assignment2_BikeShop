@@ -7,20 +7,29 @@
  * Accepts messages from App.java, parses them using Message.java
  */
 
-package edu.curtin.oose2024s1.assignment2.Shop;
+package edu.curtin.oose2024s1.assignment2.shop;
 import java.util.*;
-import edu.curtin.oose2024s1.assignment2.Inventory.Inventory;
-import edu.curtin.oose2024s1.assignment2.Message.Message;
-import edu.curtin.oose2024s1.assignment2.Shop.ShopObservers.*;
-import edu.curtin.oose2024s1.assignment2.Shop.ShopStates.*;
+import java.util.logging.*;
+
+import edu.curtin.oose2024s1.assignment2.App;
+import edu.curtin.oose2024s1.assignment2.inventory.*;
+import edu.curtin.oose2024s1.assignment2.message.*;
+import edu.curtin.oose2024s1.assignment2.shop.observers.*;
+import edu.curtin.oose2024s1.assignment2.shop.states.*;
 
 public class Shop 
 {
+    private static final Logger logger = Logger.getLogger(App.class.getName());
+
     private int money;
     private int day;
     private Inventory inventory;
+
+    //Observers
     private Set<ShopObserver> obs = new HashSet<>();
     private PaydayObserver paydayOb;
+
+    //States
     private DeliveryState deliveryState = new DeliveryCAN(); 
     private PurchaseState purchaseState = new PurchaseCAN();
     private DropOffState dropOffState = new DropOffCAN();
@@ -87,6 +96,7 @@ public class Shop
         dropOffOb.setup();
         ServicingObserver servicingOb = new ServicingObserver(this);
         servicingOb.setup();
+        logger.log(Level.INFO, "[Shop.java.setupObservers()] Setup observers");
     }
 
     public void notifyObservers()
@@ -95,6 +105,7 @@ public class Shop
         {
             ob.observed();
         }
+        logger.log(Level.INFO, "[Shop.java.notifyObservers()] Notified observers");
     }
 
     public void setDeliveryState(DeliveryState newState)
@@ -131,8 +142,20 @@ public class Shop
     {
         String feedback;
 
-        Message toExec = Message.createMessage(msg, this);
-        feedback = toExec.execute();
+        Message toExec;
+        try 
+        {
+            toExec = Message.createMessage(msg, this);
+            feedback = toExec.execute();
+            logger.log(Level.INFO,"Executed a valid messsage");
+        } 
+        catch (InvalidMessageException e) 
+        {
+            feedback = e.getMessage();
+            //logger.log(Level.INFO, e.getMessage());
+            logger.info(() -> e.getMessage());
+        }
+        
 
         return feedback;
     }

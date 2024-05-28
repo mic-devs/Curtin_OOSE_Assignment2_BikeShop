@@ -2,9 +2,10 @@
 //  and owned bikes (being serviced or for pick-up).
 //  Processes bikes for purchase, delivery, drop-off, and pick-up
 
-package edu.curtin.oose2024s1.assignment2.Inventory;
+package edu.curtin.oose2024s1.assignment2.inventory;
 import java.util.ArrayList;
 
+@SuppressWarnings("PMD.LooseCoupling") //ArrayList is needed for use-case
 public class Inventory 
 {
     private int available; //no. of bikes available to purchase
@@ -14,8 +15,8 @@ public class Inventory
     public Inventory()
     {
         this.available = 50; //inventory always starts with 50 bikes available
-        this.servicing = new ArrayList<Bike>(); 
-        this.toPickUp = new ArrayList<Bike>(); 
+        this.servicing = new ArrayList<>(); 
+        this.toPickUp = new ArrayList<>(); 
     }
 
     public int getAllBikes()
@@ -56,9 +57,10 @@ public class Inventory
         toPickUp.add(newBike); 
     }
 
-    public void serviceBikes(int date) //check bikes in servicing, and move to pick-up if ready
+    public void serviceBikes(int date)
     {
-        ArrayList<Bike> toRemove = new ArrayList<Bike>();
+        //check bikes in servicing, and move to pick-up if ready
+        ArrayList<Bike> toRemove = new ArrayList<>();
 
         for (Bike i : servicing) //check every bike
         {
