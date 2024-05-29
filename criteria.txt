@@ -1,0 +1,47 @@
+This program utilises Observer and State patterns hand-in-hand. In short, this program consists of 5 Observer pattern implementations, and 3 State pattern implementations. 3 out of the aforementioned 5 Observer pattern implementations are used to control the 3 State patterns respectively.
+
+---------------------------------------------------------
+
+Criteria (e): Observer Pattern
+
+5 Observer pattern implementations exist through the following classes:
+	1) PaydayObserver.java
+	2) ServicingObserver.java
+	3) DeliveryObserver.java
+	4) DropOffObserver.java
+	5) PurchaseObserver.java
+
+All of which implement the ShopObserver.java interface, and all observers set-up themselves. Observers 2-5 are saved in a HashSet of observers in Shop.java and is notified before every message is processed.
+
+1) PaydayObserver is notified only once per day in the main. It's job is to check if the date is a multiple of seven, signifying that it is the end of a week, which makes it payday for the shopkeeper. If so, it deducts $1000 from the shop's balance. PaydayObserver is the only observer that is notified separately from the others and only once per day. It is not called before every message processing, because doing so may result in the balance being deducted the $1000 wage multiple times in a single payday when multiple messages are being processed.
+
+2) ServicingObserver checks all the bikes (in-servicing) stored in the inventory's 'servicing' ArrayList, if 2 days have elapsed since their respective drop-off. If 2 days have elapsed since a bike's drop-off, it will move the bike to the inventory's 'toPickUp' ArrayList.
+
+3) DeliveryObserver controls the DeliveryState. It checks if there is enough space for 10 new bikes to be delivered, and if there is enough money ($10,000) to pay for the delivery. If yes, then the shop's DeliveryState is set to DeliveryCAN, or DeliveryNOT if both conditions are not met.
+
+4) DropOffObserver controls the DropOffState. It checks if there is enough space for one bike to be dropped-off for servicing. If there is space, DropOffCAN state is set, otherwise DropOffNOT state is set.
+
+5) PurchaseObserver controls the PurchaseState. It checks if there is at least one available bike for purchase (either online or in-store). If yes, PurchaseCAN state is set, otherwise PurchaseNOT state is set.
+
+---------------------------------------------------------
+
+Criteria (f) State Pattern
+
+There are 3 State Pattern Implementations, with two possible states for each
+	(1) DeliveryState
+		(a) DeliveryCAN
+		(b) DeliveryNOT 
+	(2) DropOffState
+		(a) DropOffCAN
+		(b) DropOffNOT 
+	(1) PurchaseState
+		(a) PurchaseCAN
+		(b) PurchaseNOT 
+
+1) DeliveryState determines whether a delivery can be made or not, with the states sharing doDelivery(). DeliveryCAN is set when there is space for 10 new bikes, and the shop's balance is at least $10,000. Invoking its doDelivery() will accept 10 new available bikes and deduct $5000 from the shop's balance. DeliveryNOT will only return a failure message.
+
+2) DropOffState determines whether a bike can be drop-off for servicing, with the states sharing doDropOff(). DropOffCAN is set when there is space for one bike, invoking its doDropOff() will accept a bike for servicing. DropOffNOT will only return a failure message.
+
+2) PurchaseState determines whether there is a bike available for purchase (online or in-store), with the states sharing purchase(). PurchaseCAN is set when there is a bike available for purchase, invoking its purchase() will reduce the available bikes by one and add $1000 to the shop's balance. PurchaseNOT will only return a failure message.
+
+
